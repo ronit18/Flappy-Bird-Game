@@ -18,11 +18,11 @@ display = pygame.display.set_mode((WIDTH, HEIGHT))
 font = pygame.font.SysFont(None, 100)
 
 #sounds of score and hit and jump
-score_sound = pygame.mixer.Sound('C:\\Programming\\Python\\bird_game\\Sounds\\score.mp3')
+score_sound = pygame.mixer.Sound('C:\\Programming\\Python\\Flappy-Bird Game\\Sounds\\score.mp3')
 score_sound.set_volume(0.3)
-punch_sound = pygame.mixer.Sound('C:\\Programming\\Python\\bird_game\\Sounds\\punch.mp3')
+punch_sound = pygame.mixer.Sound('C:\\Programming\\Python\\Flappy-Bird Game\\Sounds\\punch.mp3')
 punch_sound.set_volume(0.1)
-jump_sound = pygame.mixer.Sound('C:\\Programming\\Python\\bird_game\\Sounds\\jump.mp3')
+jump_sound = pygame.mixer.Sound('C:\\Programming\\Python\\Flappy-Bird Game\\Sounds\\jump.mp3')
 jump_sound.set_volume(0.3)
 
 #Games fps
@@ -62,11 +62,11 @@ class EdgesMixin:
 class BirdSprite(EdgesMixin, pygame.sprite.Sprite):
 	def __init__(self):
 		super().__init__()
-		self.image = pygame.image.load('C:\\Programming\\Python\\bird_game\\Images\\bird.png') ##loades image of bird from the images folder 
+		self.image = pygame.image.load('C:\\Programming\\Python\\Flappy-Bird Game\\Images\\bird.png') ##loades image of bird from the images folder 
 		self.image.set_colorkey(WHITE)
 		self.image.convert_alpha() 		#we use this to remove alpha backgroud from image.
 
-		self.bird_image = pygame.image.load('C:\\Programming\\Python\\bird_game\\Images\\bird.png')
+		self.bird_image = pygame.image.load('C:\\Programming\\Python\\Flappy-Bird Game\\Images\\bird.png')
 		self.bird_image.set_colorkey(WHITE)
 		self.bird_image.convert_alpha()
 
@@ -90,7 +90,7 @@ class BirdSprite(EdgesMixin, pygame.sprite.Sprite):
 class PipeSprite(EdgesMixin, pygame.sprite.Sprite):
 	def __init__(self, side: str, padding: int, from_right: int = 0):
 		super().__init__()
-		self.image = pygame.image.load(f'C:\\Programming\\Python\\bird_game\\Images\\{side}_pipe.png')  #loades image of pipe from the images folder #here f string is used so that after wards we can use and if-else statement to decide whether top or bottom of pipe we have to use.
+		self.image = pygame.image.load(f'C:\\Programming\\Python\\Flappy-Bird Game\\Images\\{side}_pipe.png')  #loades image of pipe from the images folder #here f string is used so that after wards we can use and if-else statement to decide whether top or bottom of pipe we have to use.
 		self.image.set_colorkey(WHITE)
 		self.image.convert_alpha()  #we use this to remove alpha backgroud from image.
 
